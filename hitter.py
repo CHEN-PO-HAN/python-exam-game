@@ -8,13 +8,13 @@ _pose_cache = {
 }
 
 
-def _lerp(prev, target, factor):
+def _lerp(prev, target, factor):    
     """往目標點補間，讓姿勢轉換更平滑。"""
     if prev is None:
-        return target
+        return target   #初始狀態直接回傳目標點
     return (
-        prev[0] + (target[0] - prev[0]) * factor,
-        prev[1] + (target[1] - prev[1]) * factor,
+        prev[0] + (target[0] - prev[0]) * factor,   
+        prev[1] + (target[1] - prev[1]) * factor,   
     )
 
 
